@@ -1,0 +1,255 @@
+# NSDictionary Related
+-[NSDictionary countByEnumeratingWithState:objects:count:]:
+  [8, 0, 8, 0, 0]
+-[NSDictionary objectForKeyedSubscript:]:
+  [3, 0, 0]
++[NSDictionary dictionaryWithObjects:forKeys:count:]:
+  [6, 0, 0, 0, 0]
++[NSDictionary dictionaryWithContentsOfFile:]:
+  [1, 0, 0]
+-[NSDictionary objectForKey:]:
+  [3, 0, 0]
+-[NSDictionary enumerateKeysAndObjectsUsingBlock:]:
+  [0, 0, 0]
+-[NSDictionary fileType]:
+  [1, 0]
+-[NSDictionary fileGroupOwnerAccountID]:
+  [1, 0]
+-[NSDictionary filePosixPermissions]:
+  [1, 0]
+-[NSDictionary count]:
+  [1, 0]
+
+# NSMutableDictionary
+-[NSMutableDictionary setObject:forKey:]:
+  [0, 3, 0, 0]
+-[NSMutableDictionary setObject:forKeyedSubscript:]:
+  [0, 3, 0, 0]
+-[NSMutableDictionary count]:
+  [1, 0]
+
+# NSError Related
++[NSError errorWithDomain:code:userInfo:]:
+  [7, 0, 0, 0, 0]
+-[NSError initWithDomain:code:userInfo:]:
+  [7, 0, 0, 0, 0]
+
+# NSURL Related
++[NSURL fileURLWithPath:]:
+  [1, 0, 0]
+-[NSURL URLByAppendingPathComponent:]:
+  [3, 0, 0]
+-[NSURL setResourceValue:forKey:error:]:
+  [14, 6, 0, 0, 0]
+-[NSURL getResourceValue:forKey:error:]:
+  [14, 0, 10, 0, 0]
+
+# NSString Related
+-[NSString length]:
+  [1, 0]
+-[NSString UTF8String]:
+  [1, 0]
+-[NSString stringByStandardizingPath]:
+  [1, 0]
+-[NSString hasPrefix:]:
+  [3, 0, 0]
+-[NSString hasSuffix:]:
+  [3, 0, 0]
++[NSString stringWithUTF8String:]:
+  [1, 0, 0]
++[NSString stringWithFormat:]:
+  [255, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+-[NSString rangeOfString:]:
+  [3, 0, 0]
+-[NSString rangeOfString:option:]:
+  [6, 0, 0, 0]
+-[NSString initWithData:encoding:]:
+  [2, 0, 0, 0]
+-[NSString componentsSeparatedByString:]:
+  [2, 0, 0]
+-[NSString initWithFormat:arguments:]:
+  [3, 0, 0, 0]
+-[NSString writeToURL:atomically:encoding:error:]:
+  [0, 0, 0, 0, 0, 0]
+-[NSString writeToFile:atomically:encoding:error:]:
+  [0, 0, 0, 0, 0, 0]
+-[NSString stringByAppendingPathComponent:]:
+  [3, 0, 0]
+-[NSString stringByAppendingPathExtension:]:
+  [3, 0, 0]
+-[NSString substringWithRange:]:
+  [3, 0, 0]
+-[NSString stringByAppendingString:]:
+  [3, 0, 0]
+-[NSString isEqualToString:]:
+  [3, 0, 0]
+-[NSString containsString:]:
+  [3, 0, 0]
+-[NSString stringByDeletingLastPathComponent]:
+  [1, 0]
+-[NSString compare:options:]:
+  [6, 0 ,0, 0]
+
+# NSNumber Related
++[NSNumber numberWithBool:]:
+  [1, 0, 0]
++[NSNumber numberWithInt:]:
+  [1, 0, 0]
++[NSNumber numberWithShort:]:
+  [1, 0, 0]
++[NSNumber numberWithUnsignedInteger:]:
+  [1, 0, 0]
++[NSNumber numberWithUnsignedLong:]:
+  [1, 0, 0]
+
+# NSFileManager Related
+-[NSFileManager contentsOfDirectoryAtPath:error:]:
+  [2, 0, 0, 0]
+-[NSFileManager createFileAtPath:contents:attributes:]:
+  [5, 0, 0, 0, 0]
+-[NSFileManager setAttributes:ofItemAtPath:error:]:
+  [6, 0, 0, 0, 0]
+-[NSFileManager attributesOfItemAtPath:error:] :
+  [2, 0, 0, 0]
+-[NSFileManager isWritableFileAtPath:]:
+  [1, 0, 0]
+-[NSFileManager fileExistsAtPath:isDirectory:]:
+  [2, 0, 0, 2]
+-[NSFileManager fileExistsAtPath:]:
+  [1, 0, 0]
+-[NSFileManager createDirectoryAtURL:withIntermediateDirectories:attributes:error:]:
+  [14, 0, 0, 0, 0, 0]
+-[NSFileManager createDirectoryAtPath:withIntermediateDirectories:attributes:error:]:
+  [14, 0, 0, 0, 0, 0]
+-[NSFileManager removeItemAtPath:error:]:
+  [2, 0, 0, 0]
+-[NSFileManager removeItemAtURL:error:]:
+  [2, 0, 0, 0]
+-[NSFileManager copyItemAtPath:toPath:error:]:
+  [6, 0, 0, 0, 0]
+-[NSFileManager moveItemAtPath:toPath:error:]:
+  [6, 0, 0, 0, 0]
+-[NSFileManager enumeratorAtURL:includingPropertiesForKeys:options:errorHandler:]:
+  [14, 0, 0, 0, 0, 0]
++[NSFileManager defaultManager]:
+  [0, 0]
+
+# NSArray Related
+# +[NSArray arrayWithObjects:]:
+#   [1, 0, 0]
++[NSArray arrayWithObjects:count:]:
+  [2, 0, 0, 0]
+-[NSArray objectAtIndex:]:
+  [3, 0, 0]  
+-[NSArray objectAtIndexedSubscript:]:
+  [3, 0, 0]
+-[NSArray sortedArrayUsingComparator:]:
+  [3, 0, 0]
+-[NSArray componentsJoinedByString:]:
+  [3, 0, 0]
+-[NSArray countByEnumeratingWithState:objects:count:]:
+  [8, 0, 8, 0, 0]
+# NSMutableArray Related
++[NSMutableArray arrayWithCapacity:]:
+  [1, 0, 0]
+
+# NSMutableSet Related
+-[NSMutableSet addObject:]:
+  [0, 1, 0]
+
+# NSFileHandle Related
++[NSFileHandle fileHandleForWritingToURL:error:]:
+  [2, 0, 0, 0]
+-[NSFileHandle initWithFileDescriptor:closeOnDealloc:]:
+  [2, 0, 0, 0]
+-[NSFileHandle writeData:]:
+  [0, 1, 0]
+-[NSFileHandle writeData:error:]:
+  [6, 2, 0, 0]
+
+# NSData Related
++[NSData dataWithBytes:length:]:
+  [3, 0, 0, 0]
+
+# NSTask Related
+-[NSTask setLaunchPath:]:
+  [0, 1, 0]
+-[NSTask setArguments:]:
+  [0, 1, 0]
+-[NSTask setStandardOutput:]:
+  [0, 1, 0]
+-[NSTask setStandardError:]:
+  [0, 1, 0]
+-[NSTask setTerminationHandler:]:
+  [0, 1, 0]
+-[NSTask setCurrentDirectoryPath:]:
+  [0, 1, 0]
+-[NSTask setEnvironment:]:
+  [0, 1, 0]
+
+# NSRegularExpression Related
++[NSRegularExpression regularExpressionWithPattern:options:error:]:
+  [6, 0, 0, 0, 0]
+-[NSRegularExpression rangeOfFirstMatchInString:options:range:]:
+  [6, 0, 0, 0, 0]
+-[NSRegularExpression firstMatchInString:options:range:]:
+  [6, 0, 0, 0, 0]
+-[NSRegularExpression matchesInString:options:range:]:
+  [6, 0, 0, 0, 0]
+-[NSRegularExpression numberOfMatchesInString:options:range:]:
+  [6, 0, 0, 0, 0]
+
+# NSDate Related
+-[NSDate descriptionWithCalendarFormat:timeZone:locale:]:
+  [15, 0, 0, 0, 0]
+-[NSDate dateByAddingTimeInterval:]:
+  [3, 0, 0]
+-[NSDate compare:]:
+  [3, 0, 0]
+# NSDateFormatter Related
+-[NSDateFormatter stringFromDate:]:
+  [1, 0, 1]
+-[NSDateFormatter setDateFormat:]:
+  [0, 1, 0]
++[NSDateFormatter localizedStringFromDate:dateStyle:timeStyle:]:
+  [7, 0, 0, 0, 0]
+
+# NSJSONSerialization Related
++[NSJSONSerialization dataWithJSONObject:options:error:]:
+  [4, 0, 0, 0, 0]
+
+# NSBundle Related
++[NSBundle bundleForClass:]:
+  [1, 0, 0]
+-[NSBundle pathForResource:ofType:]:
+  [3, 0, 0]
+
+# NSUUID Related
++[NSUUID UUID]:
+  [0, 0]
+-[NSUUID UUIDString]:
+  [1, 0]
+
+# API Collection which doesn't care the exact recv type
+-[UNKNOWN dictionaryWithValuesForKeys:]:
+  [3, 0, 0]
+-[UNKNOWN isKindOfClass:]:
+  [3, 0, 0]
+-[UNKNOWN boolValue]:
+  [1, 0]
++[UNKNOWN new]:
+  [0, 0]
+-[UNKNOWN mutableCopy]:
+  [1, 0]
+-[UNKNOWN UTF8String]:
+  [1, 0]
+-[UNKNOWN fileSystemRepresentation]:
+  [1, 0]
+-[UNKNOWN stringByDeletingLastPathComponent]:
+  [1, 0]
+-[UNKNOWN lastPathComponent]:
+  [1, 0]
+-[UNKNOWN length]:
+  [1, 0]
+-[UNKNOWN isEqualToString:]:
+  [3, 0, 0]

@@ -1,0 +1,146 @@
+# instance method:
+# (self, sel, ...args)
+# 
+# class method:
+# (class, sel, ...args)
+
+NSTask:
+  '+ launchedTaskWithLaunchPath:arguments:': [1, 1] # self and sel omitted
+  '- setLaunchPath:': [1]
+  '- setArguments:': [1]
+  '- launch': [] # no argument at all
+  '- launchAndReturnError:': [0]
+  '+ launchedTaskWithExecutableURL:arguments:error:terminationHandler:': [1, 1, 0, 0]
+
+NSUserScriptTask:
+  '- initWithURL:error:': [1, 0]
+  '- setScriptURL': [1] # property setter
+  '- executeWithCompletionHandler:': [0] # don't care the argument
+
+NSUserAppleScriptTask:
+  '- executeWithAppleEvent:completionHandler:': [1, 0]
+
+NSUserUnixTask:
+  '- executeWithArguments:completionHandler:': [1, 0]
+
+NSFileManager:
+  '- copyPath:toPath:handler:': [1, 1, 0]
+  '- movePath:toPath:handler:': [1, 1, 0]
+  '- removeFileAtPath:handler:': [1, 1, 0]
+  '- removeItemAtURL:error:': [1, 0]
+  '- removeItemAtPath:error:': [1, 0]
+  '- changeFileAttributes:atPath:': [1, 1, 0]
+  '- linkPath:toPath:handler:': [1, 1, 0]
+  '- copyItemAtURL:toURL:error:': [1, 1, 0]
+  '- copyItemAtPath:toPath:error:': [1, 1, 0]
+  '- moveItemAtURL:toURL:error:': [1, 1, 0]
+  '- moveItemAtPath:toPath:error:': [1, 1, 0]
+  '- createSymbolicLinkAtURL:withDestinationURL:error:': [1, 1, 0]
+  '- createSymbolicLinkAtPath:withDestinationPath:error:': [1, 1, 0]
+  '- createDirectoryAtURL:withIntermediateDirectories:attributes:error:': [1, 0, 1, 0]
+  '- linkItemAtURL:toURL:error:': [1, 1, 0]
+  '- linkItemAtPath:toPath:error:': [1, 1, 0]
+  '- setAttributes:ofItemAtPath:error:': [1, 1, 0]
+  '- createFileAtPath:contents:attributes:]': [1, 1, 1]
+
+NSBundle:
+  '+ bundleWithURL:': [1]
+  '+ bundleWithPath:': [1]
+  '- initWithURL:': [1]
+  '- initWithPath:': [1]
+  # 'principalClass': []
+  '- load': []
+  '- loadAndReturnError:': [0]
+
+# NSXPCConnection:
+#   'processIdentifier': [] # risky validation
+
+NSWorkspace:
+  '- openURL:options:configuration:error:': [1, 1, 0, 0]
+  '- openURLs:withApplicationAtURL:options:configuration:error:': [1, 1, 0, 0, 0]
+  '- openFile:': [1]
+  '- openFile:withApplication:': [1, 0]
+  '- openFile:withApplication:andDeactivate:': [1, 0, 0]
+  '- openFile:fromImage:at:inView:': [1, 0, 0, 0]
+
+NSString:
+  # write
+  '- writeToFile:atomically:encoding:error:': [1, 0, 0, 0]
+  '- writeToURL:atomically:encoding:error:': [1, 0, 0, 0]
+  # read from path
+  '+ stringWithContentsOfFile:encoding:error:': [1, 0, 0]
+  '- initWithContentsOfFile:encoding:error:': [1, 0, 0]
+  '+ stringWithContentsOfFile:usedEncoding:error:': [1, 0, 0]
+  '- initWithContentsOfFile:usedEncoding:error:': [1, 0, 0]
+  # read from URL
+  '+ stringWithContentsOfURL:encoding:error:': [1, 0, 0]
+  '- initWithContentsOfURL:encoding:error:': [1, 0, 0]
+  '+ stringWithContentsOfURL:usedEncoding:error:': [1, 0, 0]
+  '- initWithContentsOfURL:usedEncoding:error:': [1, 0, 0]
+
+NSDictionary:
+  '+ dictionaryWithContentsOfURL:error:': [1, 0]
+  '+ dictionaryWithContentsOfURL:': [1]
+  '- initWithContentsOfURL:error:': [1, 0]
+  '- initWithContentsOfURL:': [1]
+  '+ dictionaryWithContentsOfFile:': [1]
+  '- initWithContentsOfFile:': [1]
+  # write
+  '- writeToURL:error:': [1, 0]
+  '- writeToURL:atomically:': [1, 0]
+  '- writeToFile:atomically:': [1, 0]
+
+NSArray:
+  '+ arrayWithContentsOfFile:': [1]
+  '+ arrayWithContentsOfURL:': [1]
+  '+ arrayWithContentsOfURL:error:': [1, 0]
+  '- initWithContentsOfURL:error:': [1, 0]
+  '- writeToFile:atomically:': [1, 0]
+  '- writeToURL:atomically:': [1, 0]
+  '- writeToURL:error:': [1, 0]
+
+NSData:
+  '+ dataWithContentsOfFile:': [1]
+  '+ dataWithContentsOfFile:options:error:': [1, 0, 0]
+  '+ dataWithContentsOfURL:': [1]
+  '+ dataWithContentsOfURL:options:error:': [1, 0, 0]
+  '- initWithContentsOfFile:': [1]
+  '- initWithContentsOfFile:options:error:': [1, 0, 0]
+  '- initWithContentsOfURL:': [1]
+  '- initWithContentsOfURL:options:error:': [1, 0, 1]
+  '- initWithContentsOfMappedFile:': [1]
+  '+ dataWithContentsOfMappedFile:': [1]
+  '- writeToFile:atomically:': [1, 0]
+  '- writeToFile:options:error:': [1, 0, 0]
+  '- writeToURL:atomically:': [1, 0]
+  '- writeToURL:options:error:': [1, 0, 0]
+
+# dynamic code execution
+NSInvocation:
+  '+ invocationWithMethodSignature:': [1]
+  '- invoke': []
+  '- invokeWithTarget:': [1]
+  '- setArgument:atIndex:': [1, 2]
+
+NSExpression:
+  '+ expressionWithFormat:': [1]
+  '+ expressionWithFormat:argumentArray:': [1, 0]
+  '+ expressionWithFormat:arguments:': [1, 0]
+  '- expressionValueWithObject:context:': [0, 0]
+
+NSAppleScript:
+  '- initWithContentsOfURL:error:': [1, 0]
+  '- initWithSource:': [1]
+  '- executeAndReturnError:': [0]
+  '- executeAppleEvent:error:': [1, 0]
+
+# # possible paramater injection
+# NSProcessInfo:
+#   'arguments': []
+#   'environment': []
+
+ABFileServices:
+  '- dlopen::': [1, 0]
+
+CNFileServices:
+  '- dlopen::': [1, 0]

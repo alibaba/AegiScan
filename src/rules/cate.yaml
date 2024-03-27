@@ -1,0 +1,124 @@
+cate1: # Manipulating file permissions and owner
+  _fchown
+  _fchmod
+  -[NSFileManager changeFileAttributes:atPath:]
+  -[NSFileManager setAttributes:ofItemAtPath:error:]
+cate2: # Access files
+  _dlopen
+  -[NSFileManager copyPath:toPath:handler:]
+  -[NSFileManager movePath:toPath:handler:]
+  -[NSFileManager removeFileAtPath:handler:]
+  -[NSFileManager removeItemAtURL:error:]
+  -[NSFileManager removeItemAtPath:error:]
+  -[NSFileManager linkPath:toPath:handler:]
+  -[NSFileManager copyItemAtURL:toURL:error:]
+  -[NSFileManager copyItemAtPath:toPath:error:]
+  -[NSFileManager moveItemAtURL:toURL:error:]
+  -[NSFileManager moveItemAtPath:toPath:error:]
+  -[NSFileManager createSymbolicLinkAtURL:withDestinationURL:error:]
+  -[NSFileManager createSymbolicLinkAtPath:withDestinationPath:error:]
+  -[NSFileManager createDirectoryAtURL:withIntermediateDirectories:attributes:error:]
+  -[NSFileManager linkItemAtURL:toURL:error:]
+  -[NSFileManager linkItemAtPath:toPath:error:]
+  -[NSFileManager createFileAtPath:contents:attributes:]]
+  -[NSString writeToFile:atomically:encoding:error:]
+  -[NSString writeToURL:atomically:encoding:error:]
+  +[NSString stringWithContentsOfFile:encoding:error:]
+  -[NSString initWithContentsOfFile:encoding:error:]
+  +[NSString stringWithContentsOfFile:usedEncoding:error:]
+  -[NSString initWithContentsOfFile:usedEncoding:error:]
+  +[NSString stringWithContentsOfURL:encoding:error:]
+  -[NSString initWithContentsOfURL:encoding:error:]
+  +[NSString stringWithContentsOfURL:usedEncoding:error:]
+  -[NSString initWithContentsOfURL:usedEncoding:error:]
+  +[NSDictionary dictionaryWithContentsOfURL:error:]
+  +[NSDictionary dictionaryWithContentsOfURL:]
+  -[NSDictionary initWithContentsOfURL:error:]
+  -[NSDictionary initWithContentsOfURL:]
+  +[NSDictionary dictionaryWithContentsOfFile:]
+  -[NSDictionary initWithContentsOfFile:]
+  -[NSDictionary writeToURL:error:]
+  -[NSDictionary writeToURL:atomically:]
+  -[NSDictionary writeToFile:atomically:]
+  +[NSArray arrayWithContentsOfFile:]
+  +[NSArray arrayWithContentsOfURL:]
+  +[NSArray arrayWithContentsOfURL:error:]
+  -[NSArray initWithContentsOfURL:error:]
+  -[NSArray writeToFile:atomically:]
+  -[NSArray writeToURL:atomically:]
+  -[NSArray writeToURL:error:]
+  +[NSData dataWithContentsOfFile:]
+  +[NSData dataWithContentsOfFile:options:error:]
+  +[NSData dataWithContentsOfURL:]
+  +[NSData dataWithContentsOfURL:options:error:]
+  -[NSData initWithContentsOfFile:]
+  -[NSData initWithContentsOfFile:options:error:]
+  -[NSData initWithContentsOfURL:]
+  -[NSData initWithContentsOfURL:options:error:]
+  -[NSData initWithContentsOfMappedFile:]
+  +[NSData dataWithContentsOfMappedFile:]
+  -[NSData writeToFile:atomically:]
+  -[NSData writeToFile:options:error:]
+  -[NSData writeToURL:atomically:]
+  -[NSData writeToURL:options:error:]
+cate3: # manage preference
+  _CFPreferencesCopyAppValue
+  _CFPreferencesCopyValue
+  _CFPreferencesSetValue
+  _CFPreferencesSetMultiple
+  _CFPreferencesSetAppValue
+cate4: # manage process
+  _system
+  _execl
+  _execlp
+  _execle
+  _execv
+  _execvp
+  _execvP
+  _sandbox_init
+  _sandbox_init_with_parameters
+  _posix_spawn
+  _posix_spawnp
+  _LSOpenApplication
+  _LSOpenURLsWithRole
+  _LSOpenFSRef
+  _LSOpenCFURLRef
+  _LSOpenFromURLSpec
+  _CFBundleCreate
+  _CFBundleCreateBundlesFromDirectory
+  _CFBundleLoadExecutable
+  _CFBundleLoadExecutableAndReturnError
+  _SMJobSubmit
+  _SMJobBless
+  +[NSTask launchedTaskWithLaunchPath:arguments:]
+  -[NSTask setLaunchPath:]
+  -[NSTask setArguments:]
+  -[NSTask launch]
+  -[NSTask launchAndReturnError:]
+  +[NSTask launchedTaskWithExecutableURL:arguments:error:terminationHandler:]
+  -[NSUserScriptTask initWithURL:error:]
+  -[NSUserScriptTask setScriptURL]
+  -[NSUserScriptTask executeWithCompletionHandler:]
+  -[NSUserAppleScriptTask executeWithAppleEvent:completionHandler:]
+  -[NSUserUnixTask executeWithArguments:completionHandler:]
+  +[NSBundle bundleWithURL:]
+  +[NSBundle bundleWithPath:]
+  -[NSBundle initWithURL:]
+  -[NSBundle initWithPath:]
+  -[NSBundle load]
+  -[NSBundle loadAndReturnError:]
+  +[NSInvocation invocationWithMethodSignature:]
+  -[NSInvocation invoke]
+  -[NSInvocation invokeWithTarget:]
+  -[NSInvocation setArgument:atIndex:]
+  +[NSExpression expressionWithFormat:]
+  +[NSExpression expressionWithFormat:argumentArray:]
+  +[NSExpression expressionWithFormat:arguments:]
+  -[NSExpression expressionValueWithObject:context:]
+  -[NSWorkspace openURL:options:configuration:error:]
+  -[NSWorkspace openURLs:withApplicationAtURL:options:configuration:error:]
+  -[NSWorkspace openFile:]
+  -[NSWorkspace openFile:withApplication:]
+  -[NSWorkspace openFile:withApplication:andDeactivate:]
+  -[NSWorkspace openFile:fromImage:at:inView:]
+

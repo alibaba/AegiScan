@@ -1,0 +1,202 @@
+NSXPCConnection:
+  - '@property(readonly) pid_t processIdentifier;'
+
+NSDictionary:
+  - '- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state 
+                                  objects:(K  _Nullable *)buffer 
+                                    count:(NSUInteger)len;'
+  - '+ (instancetype)dictionaryWithObjects:(ObjectType  _Nonnull const *)objects 
+                              forKeys:(id<NSCopying>  _Nonnull const *)keys 
+                                count:(NSUInteger)cnt;'
+  - '+ (NSDictionary<KeyType, ObjectType> *)dictionaryWithContentsOfFile:(NSString *)path;'
+  - '- (ObjectType)objectForKey:(KeyType)aKey;'
+  - '- (ObjectType)objectForKeyedSubscript:(KeyType)key;'
+  - '- (void)enumerateKeysAndObjectsUsingBlock:(void (^)(KeyType key, ObjectType obj, BOOL *stop))block;'
+  - '- (NSString *)fileType;'
+  - '- (NSNumber *)fileGroupOwnerAccountID;'
+  - '- (NSUInteger)filePosixPermissions;'
+  # - '@property(readonly) NSUInteger count;'
+
+NSMutableDictionary:
+  - '- (void)setObject:(ObjectType)anObject 
+           forKey:(id<NSCopying>)aKey;'
+  - '- (void)setObject:(ObjectType)obj forKeyedSubscript:(id<NSCopying>)key;'
+  - '+ (instancetype)arrayWithCapacity:(NSUInteger)numItems;'
+
+NSMutableSet:
+  - '- (void)addObject:(ObjectType)object;'
+
+NSString:
+  - '- (BOOL)hasPrefix:(NSString *)str;'
+  - '- (BOOL)hasSuffix:(NSString *)str;'
+  - '+ (instancetype)stringWithUTF8String:(const char *)nullTerminatedCString;'
+  - '+ (instancetype)stringWithFormat:(NSString *)format, ...;'
+  - '- (NSRange)rangeOfString:(NSString *)searchString;'
+  - '- (NSRange)rangeOfString:(NSString *)searchString 
+                 options:(NSStringCompareOptions)mask;'
+  - '- (instancetype)initWithData:(NSData *)data encoding:(NSStringEncoding)encoding;'
+  - '- (NSArray<NSString *> *)componentsSeparatedByString:(NSString *)separator;'
+  - '- (BOOL)writeToURL:(NSURL *)url 
+        atomically:(BOOL)useAuxiliaryFile 
+          encoding:(NSStringEncoding)enc 
+             error:(NSError * _Nullable *)error;'
+  - '- (instancetype)initWithFormat:(NSString *)format 
+                     arguments:(va_list)argList;'
+  - '- (NSString *)stringByAppendingPathComponent:(NSString *)str;'
+  - '- (NSString *)stringByAppendingPathExtension:(NSString *)str;'
+  - '- (NSString *)substringWithRange:(NSRange)range;'
+  - '- (NSString *)stringByAppendingString:(NSString *)aString;'
+  - '- (BOOL)isEqualToString:(NSString *)aString;'
+  - '- (BOOL)containsString:(NSString *)str;'
+  - '- (NSComparisonResult)compare:(NSString *)string 
+                      options:(NSStringCompareOptions)mask;'
+  # - '@property(readonly) NSUInteger length;'
+  # - '@property(readonly, copy) NSString *stringByStandardizingPath;'
+  # - '@property(readonly, copy) NSString *stringByDeletingLastPathComponent;'
+  # - '@property(readonly) const char *UTF8String;'
+
+NSNumber:
+  - '+ (NSNumber *)numberWithBool:(BOOL)value;'
+  - '+ (NSNumber *)numberWithInt:(int)value;'
+  - '+ (NSNumber *)numberWithShort:(short)value;'
+  - '+ (NSNumber *)numberWithUnsignedInteger:(NSUInteger)value;'
+  - '+ (NSNumber *)numberWithUnsignedLongLong:(unsigned long long)value;'
+
+NSFileManager:
+  - '- (NSArray<NSString *> *)contentsOfDirectoryAtPath:(NSString *)path 
+                                             error:(NSError * _Nullable *)error;'
+  - '- (BOOL)createFileAtPath:(NSString *)path 
+                contents:(NSData *)data 
+              attributes:(NSDictionary<NSFileAttributeKey, id> *)attr;'
+  - '- (BOOL)setAttributes:(NSDictionary<NSFileAttributeKey, id> *)attributes 
+         ofItemAtPath:(NSString *)path 
+                error:(NSError * _Nullable *)error;'
+  - '- (BOOL)fileExistsAtPath:(NSString *)path;'
+  - '- (BOOL)fileExistsAtPath:(NSString *)path 
+             isDirectory:(BOOL *)isDirectory;'
+  - '- (BOOL)createDirectoryAtURL:(NSURL *)url 
+              withIntermediateDirectories:(BOOL)createIntermediates 
+                  attributes:(NSDictionary<NSFileAttributeKey, id> *)attributes 
+                       error:(NSError * _Nullable *)error;'
+  - '- (BOOL)createDirectoryAtPath:(NSString *)path 
+              withIntermediateDirectories:(BOOL)createIntermediates 
+                   attributes:(NSDictionary<NSFileAttributeKey, id> *)attributes 
+                        error:(NSError * _Nullable *)error;'
+  - '- (BOOL)copyItemAtPath:(NSString *)srcPath 
+                toPath:(NSString *)dstPath 
+                 error:(NSError * _Nullable *)error;'
+  - '- (BOOL)removeItemAtURL:(NSURL *)URL 
+                  error:(NSError * _Nullable *)error;'
+  - '- (BOOL)removeItemAtPath:(NSString *)path 
+                   error:(NSError * _Nullable *)error;'
+  - '- (BOOL)moveItemAtPath:(NSString *)srcPath 
+                toPath:(NSString *)dstPath 
+                 error:(NSError * _Nullable *)error;'
+  - '- (NSDirectoryEnumerator<NSURL *> *)enumeratorAtURL:(NSURL *)url 
+                         includingPropertiesForKeys:(NSArray<NSURLResourceKey> *)keys 
+                                            options:(NSDirectoryEnumerationOptions)mask 
+                                       errorHandler:(BOOL (^)(NSURL *url, NSError *error))handler;'
+  - '- (NSDictionary<NSFileAttributeKey, id> *)attributesOfItemAtPath:(NSString *)path 
+                                                           error:(NSError * _Nullable *)error;'
+  - '- (BOOL)isWritableFileAtPath:(NSString *)path;'
+  # - '@property(class, readonly, strong) NSFileManager *defaultManager;'
+
+NSArray:
+  - '+ (instancetype)array;'
+  - '+ (instancetype)arrayWithObject:(ObjectType)anObject;'
+  - '+ (instancetype)arrayWithObjects:(ObjectType  _Nonnull const *)objects 
+                           count:(NSUInteger)cnt;'
+  - '- (ObjectType)objectAtIndex:(NSUInteger)index;'
+  - '- (ObjectType)objectAtIndexedSubscript:(NSUInteger)idx;'
+  - '- (NSArray<ObjectType> *)sortedArrayUsingComparator:(NSComparator)cmptr;'
+  - '- (NSString *)componentsJoinedByString:(NSString *)separator;'
+
+NSFileHandle:
+  - '+ (instancetype)fileHandleForWritingToURL:(NSURL *)url 
+                                    error:(NSError * _Nullable *)error;'
+  - '- (instancetype)initWithFileDescriptor:(int)fd 
+                        closeOnDealloc:(BOOL)closeopt;'
+  - '- (void)writeData:(NSData *)data;'
+  - '- (BOOL)writeData:(NSData *)data 
+            error:(out NSError * _Nullable *)error;'
+
+NSData:
+  - '+ (instancetype)dataWithBytes:(const void *)bytes 
+                       length:(NSUInteger)length;'
+
+NSRegularExpression:
+  - '+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern 
+                                              options:(NSRegularExpressionOptions)options 
+                                                error:(NSError * _Nullable *)error;'
+  - '- (NSRange)rangeOfFirstMatchInString:(NSString *)string 
+                             options:(NSMatchingOptions)options 
+                               range:(NSRange)range;'
+  - '- (NSTextCheckingResult *)firstMatchInString:(NSString *)string 
+                                     options:(NSMatchingOptions)options 
+                                       range:(NSRange)range;'
+  - '- (NSArray<NSTextCheckingResult *> *)matchesInString:(NSString *)string 
+                                             options:(NSMatchingOptions)options 
+                                               range:(NSRange)range;'
+  - '- (NSUInteger)numberOfMatchesInString:(NSString *)string 
+                              options:(NSMatchingOptions)options 
+                                range:(NSRange)range;'
+
+NSError:
+  - '+ (instancetype)errorWithDomain:(NSErrorDomain)domain 
+                           code:(NSInteger)code 
+                       userInfo:(NSDictionary<NSErrorUserInfoKey, id> *)dict;'
+  - '- (instancetype)initWithDomain:(NSErrorDomain)domain 
+                          code:(NSInteger)code 
+                      userInfo:(NSDictionary<NSErrorUserInfoKey, id> *)dict;'
+
+NSDate:
+  - '- (NSString *)descriptionWithCalendarFormat:(NSString *)format 
+                                   timeZone:(NSTimeZone *)aTimeZone 
+                                     locale:(id)locale;'
+  - '- (instancetype)dateByAddingTimeInterval:(NSTimeInterval)ti;'
+  - '- (NSComparisonResult)compare:(NSDate *)other;'
+NSDateFormatter:
+  - '+ (NSString *)localizedStringFromDate:(NSDate *)date 
+                            dateStyle:(NSDateFormatterStyle)dstyle 
+                            timeStyle:(NSDateFormatterStyle)tstyle;'
+  - '- (NSString *)stringFromDate:(NSDate *)date;'
+
+NSURL:
+  - '- (NSURL *)URLByAppendingPathComponent:(NSString *)pathComponent;'
+  - '+ (NSURL *)fileURLWithPath:(NSString *)path;'
+  - '- (BOOL)setResourceValue:(id)value 
+                  forKey:(NSURLResourceKey)key 
+                   error:(NSError * _Nullable *)error;'
+  - '- (BOOL)getResourceValue:(out id  _Nullable *)value 
+                  forKey:(NSURLResourceKey)key 
+                   error:(out NSError * _Nullable *)error;'
+  - '@property(nullable, readonly, copy) NSString *absoluteString;'
+  - '@property(nullable, readonly, copy) NSString *host;'
+  - '@property(nullable, readonly, copy) NSURL *absoluteURL;'
+  - '@property(nullable, readonly, copy) NSString *scheme;'
+  - '@property(nullable, readonly, copy) NSString *path;'
+  - '@property(nullable, readonly, copy) NSNumber *port;'
+
+NSURLComponents:
+  - '+ (instancetype)componentsWithURL:(NSURL *)url 
+          resolvingAgainstBaseURL:(BOOL)resolve;'
+  - '+ (instancetype)componentsWithString:(NSString *)URLString;'
+
+NSJSONSerialization:
+  - '+ (NSData *)dataWithJSONObject:(id)obj 
+                       options:(NSJSONWritingOptions)opt 
+                         error:(NSError * _Nullable *)error;'
+
+NSBundle:
+  - '+ (NSBundle *)bundleForClass:(Class)aClass;'
+  - '- (NSString *)pathForResource:(NSString *)name 
+                       ofType:(NSString *)ext;'
+
+NSUUID:
+  - '+ (instancetype)UUID;'
+  # - '@property(readonly, copy) NSString *UUIDString;'
+
+UNKNOWN:
+  - '- (NSDictionary<NSString *,id> *)dictionaryWithValuesForKeys:(NSArray<NSString *> *)keys;' # TODO: NSKeyValueCoding
+  - '- (BOOL)isKindOfClass:(Class)aClass;'
+  - '- (id)mutableCopy;'

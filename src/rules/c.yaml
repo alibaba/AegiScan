@@ -1,0 +1,63 @@
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation:
+  # bundle
+  CFBundleCreate: [0, 1]
+  CFBundleCreateBundlesFromDirectory: [0, 1, 0]
+  CFBundleLoadExecutable: [1]
+  CFBundleLoadExecutableAndReturnError: [1]
+
+  # preferences
+  CFPreferencesCopyAppValue: [0, 1]
+  CFPreferencesCopyValue: [1, 1, 0, 0]
+  CFPreferencesSetValue: [1, 1, 1, 0 , 0]
+  CFPreferencesSetMultiple: [1, 1, 1, 0, 0]
+  CFPreferencesSetAppValue: [1, 1, 1]
+
+  # reflect
+  NSClassFromString: [1]
+  NSSelectorFromString: [1]
+
+/usr/lib/libSystem.B.dylib:
+  # dyld
+  dlopen: [1, 0]
+  
+  # child process
+  system: [1]
+
+  execl: [1, 1]
+  execlp: [1, 1]
+  execle: [1, 1]
+  execv: [1, 1]
+  execvp: [1, 1]
+  execvP: [1, 1, 1]
+
+  fchown: [1, 1, 1]
+  fchmod: [1, 1]
+
+  # sandbox
+  sandbox_init: [1]
+  sandbox_init_with_parameters: [1]
+
+  # xpc_connection_get_pid: [1]
+  posix_spawn: [0, 1, 0, 0, 1, 1]
+  posix_spawnp: [0, 1, 0, 0, 1, 1]
+
+
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices:
+  LSOpenApplication: [1]
+  LSOpenURLsWithRole: [1, 0, 1, 0, 0, 0]
+  LSOpenFSRef: [1, 0]
+  LSOpenCFURLRef: [1, 0]
+  LSOpenFromURLSpec: [1, ]
+
+/System/Library/Frameworks/Security.framework/Versions/A/Security:
+  SecCodeCopyGuestWithAttributes: [0, 1, 0, 0]
+  SecCodeCheckValidity: [1, 0, 0]
+  SecCodeCheckValidityWithErrors: [1, 0, 0, 0]
+  SecStaticCodeCreateWithPath: [1, 0, 0]
+  SecStaticCodeCreateWithPathAndAttributes: [1, 0, 1, 0]
+  SecStaticCodeCheckValidity: [1, 0, 0]
+  SecTaskCopyValueForEntitlement: [1, 1, 0]
+
+/System/Library/Frameworks/ServiceManagement.framework/Versions/A/ServiceManagement:
+  SMJobSubmit: [1, 1, 0, 0]
+  SMJobBless: [1, 1, 0, 0]
